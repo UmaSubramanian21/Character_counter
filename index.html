@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    
+    <title>Character Count</title>
+     <!-- link for tailwind css - jsdeliver -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+
+</head>
+
+<body class="text-blue-600 flex justify-center"  style="background-image:url('./images/count.jpg');background-size: cover;background-repeat: no-repeat;background-attachment: fixed;">
+    <section class="
+    text-center 
+    m-11
+    p-5
+    rounded-lg
+    bg-gradient-to-r from-blue-100 via-blue-200 to-blue-300
+
+    " style="height:20%; width:40%;">
+
+        <h1 class="text-2xl font-bold m-5 text-blue-500">Character Count</h1>
+        <textarea cols="20" rows="5" class=" outline-none mt-5 rounded-md"></textarea>
+        <p id="ans" class=" text-sm">200</p>
+        <p class="m-5">200 Characters Max !</p>
+        <button class="border m-3 p-2 animate-pulse rounded-lg 
+    bg-gradient-to-r from-blue-300 via-blue-200 to-blue-100
+    ">Count</button>
+        <h3 class="m-5">Total Characters</h3>
+    </section>
+
+    <script>
+        // Selecting all html elements
+        var textarea = document.querySelector("textarea")
+        var countbtn = document.querySelector("button")
+        var Answer = document.getElementById("ans")
+        var total_characters = document.querySelector("h3")
+
+        // when click count button it shows the total characters were entered
+        // count button code
+        countbtn.addEventListener("click", function (event) {
+            total_characters.textContent = textarea.value.length
+        })
+
+        // continue update the number of characters out of 200
+        // letters / 200
+        textarea.addEventListener("keyup", function () {
+            // console.log(event.key)
+            console.log(textarea.value.length)
+            Answer.textContent = textarea.value.length + "/ 200"
+            if (textarea.value.length >= 2) {
+            alert("only 200 characters allowed")
+        }
+        })
+
+        // set alert if charaters exceeds 200
+        //alert
+
+       
+
+    </script>
+</body>
+
+</html>
