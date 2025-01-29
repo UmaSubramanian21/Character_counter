@@ -22,8 +22,8 @@
 
         <h1 class="text-2xl font-bold m-5 text-blue-500">Character Count</h1>
         <textarea cols="20" rows="5" class=" outline-none mt-5 rounded-md"></textarea>
-        <p id="ans" class=" text-sm">200</p>
-        <p class="m-5">200 Characters Max !</p>
+        <p id="ans" class=" text-sm">50</p>
+        <p class="m-5">50 Characters Max !</p>
         <button class="border m-3 p-2 animate-pulse rounded-lg 
     bg-gradient-to-r from-blue-300 via-blue-200 to-blue-100
     ">Count</button>
@@ -49,8 +49,8 @@
             // console.log(event.key)
             console.log(textarea.value.length)
             Answer.textContent = textarea.value.length + "/ 200"
-            if (textarea.value.length >= 2) {
-            alert("only 200 characters allowed")
+            if (textarea.value.length >= 50) {
+            alert("only 50 characters allowed")
         }
         })
 
